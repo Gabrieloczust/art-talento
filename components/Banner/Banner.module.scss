@@ -16,12 +16,12 @@
         flex-direction: column;
         justify-content: center;
         font-family: 'Montserrat';
-        padding-right: 16px;
+        padding-right: 1rem;
 
         .title {
-            font-size: 64px;
+            font-size: 4rem;
             line-height: 1;
-            color: #100e26;
+            color: $title-color;
 
             b {
                 color: $primary;
@@ -30,17 +30,17 @@
 
         .description {
             width: 80%;
-            font-size: 16px;
-            margin: 20px 0 35px;
+            font-size: 1rem;
+            margin: 1rem 0 1.2rem;
             line-height: 1.8;
-            color: #6c6d7e;
+            color: $text-color;
         }
 
         button {
             background-color: $primary;
             color: #FFF;
-            padding: 16px;
-            border-radius: 8px;
+            padding: 1rem;
+            border-radius: .5rem;
             max-width: 200px;
             border: 0;
             text-transform: uppercase;

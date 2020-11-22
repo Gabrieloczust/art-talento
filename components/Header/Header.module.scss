@@ -7,46 +7,8 @@
 
     .logo {
         font-family: 'Courier New', Courier, monospace;
-        font-size: 38px;
+        font-size: 2.5rem;
         color: $primary;
-    }
-
-    .supmenu {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        padding: 16px 0;
-
-        .contact {
-            display: flex;
-            align-items: center;
-
-            .separator {
-                height: 100%;
-                width: 1px;
-                background-color: $border-color;
-                margin: 0 16px;
-            }
-        }
-
-        .contactIcon {
-            display: flex;
-            align-items: center;
-            font-size: 14px;
-
-            svg {
-                font-size: 16px;
-                color: $hover-color;
-            }
-
-            span {
-                margin-left: 5px;
-            }
-
-            b {
-                color: $primary;
-            }
-        }
     }
 
     .menu {
@@ -55,25 +17,21 @@
         justify-content: space-between;
         align-items: center;
 
-        padding: 16px 0;
+        padding: 1rem 0;
         border-top: 1px solid $border-color;
 
         a {
-            color: #6c6d7e;
+            color: $text-color;
 
             &:hover {
                 color: $primary;
             }
         }
-
-        img {
-            height: 38px;
-        }
     }
 
     .nav {
         display: flex;
-        gap: 0 32px;
+        gap: 0 2rem;
     }
 }
 
