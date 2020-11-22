@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import './constants.scss';
 
 @import './constants.scss';
 
@@ -21,4 +22,10 @@ a {
 
 body {
     background-color: $background;
+}
+
+@media(max-width: $media-mobile) {
+    html {
+        font-size: 14px;
+    }
 }

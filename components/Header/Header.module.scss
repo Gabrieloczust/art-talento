@@ -12,13 +12,9 @@
     box-shadow: 0 -5px 10px rgba(0, 0, 0, .25);
     background-color: $background;
 
-    .logo {
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 2.5rem;
-        color: $primary;
-    }
-
     .menu {
+        @extend .container;
+
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -27,21 +23,59 @@
         padding-bottom: 1rem;
         border-top: 1px solid $border-color;
 
-        @extend .container;
+        .logo {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 2.5rem;
+            color: $primary;
+        }
 
-        a {
-            color: $text-color;
+        #hambuguer {
+            display: none;
+        }
 
-            &:hover {
-                color: $primary;
+        .nav {
+            display: flex;
+            gap: 0 2rem;
+
+            a {
+                color: $text-color;
+
+                &:hover {
+                    color: $primary;
+                }
             }
         }
     }
-
-    .nav {
-        display: flex;
-        gap: 0 2rem;
-    }
 }
 
-@media(max-width: $media-mobile) {}
+@media(max-width: $media-mobile) {
+    .header {
+        .menu {
+            flex-wrap: wrap;
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            #hambuguer {
+                display: flex;
+                color: $primary;
+                font-size: 1.5rem;
+            }
+
+            .nav {
+                width: 100%;
+                display: none;
+                flex-direction: column;
+
+                &[data-open="true"] {
+                    display: flex;
+                }
+
+                a {
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}
