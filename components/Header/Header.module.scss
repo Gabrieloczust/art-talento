@@ -5,6 +5,13 @@
     display: flex;
     flex-direction: column;
 
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, .25);
+    background-color: $background;
+
     .logo {
         font-family: 'Courier New', Courier, monospace;
         font-size: 2.5rem;
@@ -12,13 +19,15 @@
     }
 
     .menu {
-        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-        padding: 1rem 0;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
         border-top: 1px solid $border-color;
+
+        @extend .container;
 
         a {
             color: $text-color;
